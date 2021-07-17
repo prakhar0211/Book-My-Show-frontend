@@ -31,7 +31,7 @@ const NavMd = () => {
 const NavLg = () => {
     return (
         <>
-            <div className="container mx-auto px-32 flex items-center justify-between">
+            <div className="container mx-auto px-32 flex items-center justify-between py-1">
                 <div className="flex items-center w-1/2 gap-3">
                     <div className="w-12 h-10">
                         <img src="https://i.ibb.co/zPBYW3H/imgbin-bookmyshow-office-android-ticket-png.png" alt="logo" className="w-full h-full" />
@@ -45,7 +45,7 @@ const NavLg = () => {
                     <span className="text-gray-200 text-xs flex items-center hover:text-white cursor-pointer">
                         Kanpur <BiChevronDown />
                     </span>
-                    <button className="bg-red-600 text-white px-3 py-1 text-sm rounded">Sign in</button>
+                    <button className="bg-bcolor-300 text-white px-3 py-1 text-sm rounded">Sign in</button>
                     <div className="h-8 w-8 text-white"><FiMenu className="w-full h-full"/></div>
                 </div>
             </div>
