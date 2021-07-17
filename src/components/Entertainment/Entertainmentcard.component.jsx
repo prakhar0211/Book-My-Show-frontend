@@ -4,7 +4,7 @@ import Slider from "react-slick";
 const EntertainmentCard = (props) => {
     return (
         <>
-            <div className="w-full h-30 px-2">
+            <div className="w-64 h-56 px-2">
                 <img className="h-full w-full rounded-xl" src={props.src} alt="entertainment image" />
             </div>
         </>);
@@ -29,47 +29,55 @@ const EntertainmentCardSlider = () => {
         infinite: false,
         // dots: true,
         autoplay: false,
-        slidesToShow: 2,
+        slidesToShow: 5,
         slidesToScroll: 2,
-        initialSlide: 0,
-        // responsive: [
-        //     {
-        //         breakpoints: 1024,
-        //         settings: {
-        //             slidesToShow: 3,
-        //             slidesToScroll: 2,
-        //             infinite: true,
-        //         },
-        //     },
-        //     {
-        //         breakpoints: 600,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             slidesToScroll: 1,
-        //             InitialSlide: 1,
-        //         },
-        //     },
-        //     {
-        //         breakpoints: 480,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             slidesToScroll: 1,
-        //         },
-        //     },
-        // ],
+        // leftMode: true,
+        // centerPadding: "50px",
+        arrows: false,
+        // centerMode: true,
+        // initialSlide: 0,
+        responsive: [
+            {
+                breakpoints: 1024,
+                settings: {
+                    className: "center",
+                    infinite: true,
+                    centerPadding: "60px",
+                    slidesToShow: 3,
+                    swipeToSlide: true,
+                }
+            },
+            {
+                breakpoints: 600,
+                settings: {
+                    // className: "center",
+                    // infinite: true,
+                    // centerPadding: "60px",
+                    slidesToShow: 2,
+                    swipeToSlide: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoints: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
     return (
         <>
-            <div className="lg:hidden">
+            <div className=" mx-auto px-36 md:px-8">
                 <Slider {...settings}>
                     {
                         EntertainmentImage.map((image) => (
                             <EntertainmentCard src={image} />
                         ))
                     }
-                </Slider>
-            </div>
+                </Slider></div>
         </>
     )
 };
