@@ -2,8 +2,12 @@ import React from "react";
 
 // components
 import EntertainmentCardSlider from "../components/Entertainment/Entertainmentcard.component";
-import Premier from "../components/premier/premier.component";
+// import Premier from "../components/premier/premier.component";
+import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
+
+// config
+import TempPosters from "../components/Config/tempPoster.config";
 
 const HomePage = () => {
     return (
@@ -19,9 +23,16 @@ const HomePage = () => {
                         <div><img src="https://in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-rupay-banner-web-collection-202104230555.png"
                             alt="premier" className="w-full h-full" /></div>
                     </div>
-                    <Premier />
+                    <PosterSlider images={TempPosters} title="Premieres" subtitle="Brand new releases every Friday" isDark />
                 </div>
             </div>
+            <div className="container mx-auto px-36">
+            <PosterSlider images={TempPosters} 
+            title="Online Streaming Events" 
+            isDark={false}/>
+
+            </div>
+
 
         </div>
         </>
