@@ -11,9 +11,11 @@ const PosterSlider = (props) => {
     return (
         <>
             <div className="flex flex-col items-start mb-2">
-                <h3 className={`text-2xl font-bold 
+                <h3 className={`text-2xl font-bold
+                ${props.main ? "hidden lg:block" : "block lg:pl-0 md:pl-5 pl-3"} 
                 ${props.isDark ? "text-white" : "text-gray-700"}`}>{props.title}</h3>
                 <p className={` text-md 
+                ${props.main ? "hidden lg:block" : "block"}
                 ${props.isDark ? "text-white" : "text-gray-700"}`}>{props.subtitle}</p>
             </div>
             <Slider {...PosterCarouselSettings}>

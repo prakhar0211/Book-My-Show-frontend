@@ -11,17 +11,17 @@ const settings = {
     // initialSlide: 0,
     responsive: [
         {
-            breakpoints: 1024,
+            breakpoint: 1024,
             settings: {
                 className: "center",
                 infinite: true,
                 centerPadding: "60px",
-                slidesToShow: 3,
+                slidesToShow: 5,
                 swipeToSlide: true,
             }
         },
         {
-            breakpoints: 600,
+            breakpoint: 768,
             settings: {
                 // className: "center",
                 // infinite: true,
@@ -29,10 +29,11 @@ const settings = {
                 slidesToShow: 2,
                 swipeToSlide: true,
                 arrows: false,
+                slidesToScroll: 1
             }
         },
         {
-            breakpoints: 480,
+            breakpoint: 640,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,

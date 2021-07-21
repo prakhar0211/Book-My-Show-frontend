@@ -14,6 +14,7 @@ const HeroCarousel = () => {
         dots: true,
         infinite: true,
         speed: 500,
+        autoplay:true,
         slidesToShow: 1,
         slidesToScroll: 1,
         nextarrow: <NextArrow/>,
@@ -47,7 +48,7 @@ const HeroCarousel = () => {
                 <HeroSlider {...settings}>
                     {images.map((image) => (
                         <div className="w-full h-48 md:h-96 py-3">
-                            <img src={image} alt="testing" className="w-full h-full rounded" />
+                            <img src={image} alt="testing" className="w-full h-full " />
                         </div>
                     ))}
                 </HeroSlider>
