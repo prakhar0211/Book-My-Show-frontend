@@ -4,7 +4,7 @@ import Slider from "react-slick";
 const EntertainmentCard = (props) => {
     return (
         <>
-            <div className="w-64 h-56 px-2">
+            <div className="lg:w-64 md:w-64 lg:h-56 md:h-56 lg:px-4 md:px-4 md:py-1  px-2 py-1 ">
                 <img className="h-full w-full rounded-xl" src={props.src} alt="entertainment image" />
             </div>
         </>);
@@ -38,7 +38,7 @@ const EntertainmentCardSlider = () => {
         // initialSlide: 0,
         responsive: [
             {
-                breakpoints: 1024,
+                breakpoint: 1024,
                 settings: {
                     className: "center",
                     infinite: true,
@@ -47,22 +47,27 @@ const EntertainmentCardSlider = () => {
                     swipeToSlide: true,
                 }
             },
+
             {
-                breakpoints: 600,
+                breakpoint: 768,
                 settings: {
                     // className: "center",
                     // infinite: true,
                     // centerPadding: "60px",
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     swipeToSlide: true,
                     arrows: false,
+                    slidesToScroll: 1,
+                    rows: 2,
+                    
                 }
             },
             {
-                breakpoints: 480,
+                breakpoint: 640,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
+                    rows: 2
                 },
             },
         ],
@@ -70,7 +75,7 @@ const EntertainmentCardSlider = () => {
 
     return (
         <>
-            <div className=" mx-auto px-36 md:px-8">
+            <div className=" mx-auto lg:px-36 md:px-1">
                 <Slider {...settings}>
                     {
                         EntertainmentImage.map((image) => (

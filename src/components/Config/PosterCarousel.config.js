@@ -16,7 +16,7 @@ const settings = {
                 className: "center",
                 infinite: true,
                 centerPadding: "60px",
-                slidesToShow: 5,
+                // slidesToShow: 5,
                 swipeToSlide: true,
             }
         },

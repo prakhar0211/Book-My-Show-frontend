@@ -12,9 +12,9 @@ import TempPosters from "../components/Config/tempPoster.config";
 const HomePage = () => {
     return (
         <>
-            <div className="flex flex-col gap-16 ">
-                <div className="container mx-auto px-4 md:px-8">
-                    <h1 className="text-2xl font-bold text-gray-700 my-3 px-10">The Best of Entertainment</h1>
+            <div className="flex flex-col gap-6 ">
+                <div className="container mx-auto lg:px-4 md:px-8">
+                    <h1 className="lg:text-2xl md:text-xl text-lg font-bold text-gray-700 lg:my-3 md:mt-3 md:mb-1 lg:px-40 md:px-5 px-2">The Best of Entertainment</h1>
                     <EntertainmentCardSlider />
                 </div>
                 <div className="bg-bmsgray-50 lg:py-8 ">
