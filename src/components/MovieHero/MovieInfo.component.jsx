@@ -19,9 +19,9 @@ const MovieInfo = () => {
                         <h4 className="text-xs">4k &bull; English &bull; ACTION</h4>
                         <h4 className="text-xs">1h 53m &bull; Action,   Thriller, Sci-fi &bull; 16+</h4>
                     </div>
-                    <div className="flex items-center gap-4 md:w-screen w-screen md:px-4 lg:px-0 px-4 lg:w-full ">
-                        <button className="bg-bcolor-300 w-full py-2 text-white font-semibold rounded-lg">Rent ₹149</button>
-                        <button className="bg-bcolor-300 w-full py-2 text-white font-semibold rounded-lg">Buy ₹149</button>
+                    <div className="flex items-center gap-4 md:w-screen w-screen md:px-4  px-4 lg:w-full ">
+                        <button className="bg-bcolor-300 w-full py-3 text-white font-semibold rounded-lg">Rent ₹149</button>
+                        <button className="bg-bcolor-300 w-full py-3 text-white font-semibold rounded-lg">Buy ₹149</button>
                     </div>
 
                 </div>
