@@ -1,7 +1,10 @@
 import React from 'react'
-import MovieHero from '../components/MovieHero/MovieHero.component';
 import { SiVisa } from "react-icons/si"
 import { FaCcAmazonPay } from "react-icons/fa"
+
+// Components
+import MovieHero from '../components/MovieHero/MovieHero.component';
+import Cast from '../components/Cast/Cast.component';
 
 const Movie = () => {
     return (
@@ -37,6 +40,25 @@ const Movie = () => {
                     </div>
                 </div>
 
+            </div>
+            <div className="lg:my-16 my-5 md:my-7">
+                <hr />
+            </div>
+            <div className="my-5 container px-4 md:px-6 lg:pl-32 lg:w-3/4">
+                <div className="">
+                    <h2 className="font-bold text-gray-800 text-xl pb-4">Cast & Crew</h2>
+                    <div className="flex flex-wrap gap-5">
+                        <Cast image="https://in.bmscdn.com/iedb/artist/images/website/poster/large/gal-gadot-11088-17-10-2017-11-45-36.jpg"
+                            castName="Gal Gadot"
+                            role="Wonder Woman" />
+                        <Cast image="https://in.bmscdn.com/iedb/artist/images/website/poster/large/gal-gadot-11088-17-10-2017-11-45-36.jpg"
+                            castName="Gal Gadot"
+                            role="Wonder Woman" />
+                        <Cast image="https://in.bmscdn.com/iedb/artist/images/website/poster/large/gal-gadot-11088-17-10-2017-11-45-36.jpg"
+                            castName="Gal Gadot"
+                            role="Wonder Woman" />
+                    </div>
+                </div>
             </div>
         </>
     )
