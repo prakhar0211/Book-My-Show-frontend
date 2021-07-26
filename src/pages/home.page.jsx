@@ -5,7 +5,6 @@ import EntertainmentCardSlider from "../components/Entertainment/Entertainmentca
 // import Premier from "../components/premier/premier.component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.component";
 
-
 // config
 import TempPosters from "../components/Config/tempPoster.config";
 

@@ -5,8 +5,57 @@ import { FaCcAmazonPay } from "react-icons/fa"
 // Components
 import MovieHero from '../components/MovieHero/MovieHero.component';
 import Cast from '../components/Cast/Cast.component';
+import PosterSlider from "../components/PosterSlider/PosterSlider.component";
+
+// config
+import TempPosters from "../components/Config/tempPoster.config";
 
 const Movie = () => {
+    const settings = {
+        infinite: false,
+        // dots: true,
+        autoplay: false,
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        // leftMode: true,
+        // centerPadding: "50px",
+        arrows: false,
+        // centerMode: true,
+        // initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    className: "center",
+                    infinite: true,
+                    centerPadding: "60px",
+                    // slidesToShow: 5,
+                    swipeToSlide: true,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    // className: "center",
+                    // infinite: true,
+                    // centerPadding: "60px",
+                    slidesToShow: 3,
+                    swipeToSlide: true,
+                    arrows: false,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
+
     return (
         <>
             <MovieHero />
@@ -59,6 +108,29 @@ const Movie = () => {
                             role="Wonder Woman" />
                     </div>
                 </div>
+                <div className="lg:my-16 my-5 md:my-7">
+                    <hr />
+                </div>
+                <div className="my-8">
+                    <div className="container mx-auto">
+                        <PosterSlider images={TempPosters}
+                            config={settings}
+                            title="You Might Also Like"
+                            isDark={false} />
+                    </div>
+                </div>
+                <div className="lg:my-16 my-5 md:my-7">
+                    <hr />
+                </div>
+                <div className="my-8">
+                    <div className="container mx-auto">
+                        <PosterSlider images={TempPosters}
+                            config={settings}
+                            title="BMS XCLUSIV"
+                            isDark={false} />
+                    </div>
+                </div>
+
             </div>
         </>
     )
