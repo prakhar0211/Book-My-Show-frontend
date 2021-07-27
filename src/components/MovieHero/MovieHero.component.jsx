@@ -1,21 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import MovieInfo from './MovieInfo.component'
 
+// context
+import { MovieContext } from '../../context/movie.context'
+
 const MovieHero = () => {
+    const { movie } = useContext(MovieContext);
     return (
         <>
             <div>
                 <div className="relative md:hidden w-full " style={{ height: "calc(180vw)" }}>
                     <div className="absolute z-20 bottom-8 "><MovieInfo /></div>
                     <div className="w-full h-48 bg-opacity-50 absolute bg-black z-10 bottom-0" />
-                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/zack-snyder-s-justice-league-et00047164-10-04-2021-03-22-49.jpg"
+                    <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                         alt="poster"
                         className="h-full w-full" />
                 </div>
                 <div className="relative hidden md:block w-full lg:hidden" style={{ height: "calc(140vw)" }}>
                     <div className="absolute z-20 bottom-8"><MovieInfo /></div>
                     <div className=" w-full h-56 bg-opacity-50 absolute bg-black z-10 bottom-0" />
-                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/zack-snyder-s-justice-league-et00047164-10-04-2021-03-22-49.jpg"
+                    <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                         alt="poster"
                         className="h-full w-full" />
                 </div>
@@ -26,13 +30,13 @@ const MovieHero = () => {
                     }} />
                     <div className="z-30 left-32 top-10 absolute flex items-center gap-8">
                         <div className=" w-64 h-96 ">
-                            <img src="https://in.bmscdn.com/iedb/movies/images/extra/vertical_logo/mobile/thumbnail/xxlarge/zack-snyder-s-justice-league-et00047164-10-04-2021-03-22-49.jpg"
+                    <img src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                                 alt="poster"
                                 className="h-full w-full rounded-2xl" />
                         </div>
                         <div><MovieInfo /></div>
                     </div>
-                    <img src="https://in.bmscdn.com/iedb/movies/images/extra/horizontal_no_logo/mobile/listing/xxlarge/zack-snyder-s-justice-league-et00047164-10-04-2021-03-22-49.jpg"
+                    <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
                         alt="poster"
                         className="h-full w-full" />
                 </div>
@@ -41,4 +45,4 @@ const MovieHero = () => {
     )
 }
 
-export default MovieHero
+export default MovieHero; 

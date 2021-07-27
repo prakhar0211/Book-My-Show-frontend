@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+// context
+import { MovieContext } from '../../context/movie.context';
 
 const MovieInfo = () => {
+    const { movie } = useContext(MovieContext);
+
+    // optional chaining
+    const genres =
+        // movie.genres && movie.genres.map(({name}) => name).join(", ");
+        // this will create an array of all genres and will and ", " between all elements and return an array
+        // to simplify this
+        movie.genres?.map(({ name }) => name).join(", ");
+
     return (
         <>
             <div className="flex flex-col gap-3">
@@ -13,11 +25,11 @@ const MovieInfo = () => {
                     <span className="hidden lg:block bg-transparent p-1 text-white text-xs rounded-lg">Streaming Now</span>
                     <span className="bg-bmsgray-700 lg:hidden px-2 text-white text-xs rounded-lg">Streaming Now</span>
                 </div>
-                <h1 className="hidden lg:block text-white text-4xl font-bold">Zack Snyder`s Justice League</h1>
+                <h1 className="hidden lg:block text-white text-4xl font-bold">{movie.original_title}</h1>
                 <div className="flex flex-col-reverse lg:flex-col gap-5 lg:gap-8">
                     <div className="text-white font-light flex flex-col lg:gap-4 gap-3 lg:pl-0 md:pl-5 pl-5">
-                        <h4 className="text-xs">4k &bull; English &bull; ACTION</h4>
-                        <h4 className="text-xs">1h 53m &bull; Action,   Thriller, Sci-fi &bull; 16+</h4>
+                        <h4 className="text-xs">4k &bull; {movie.original_language} &bull; ACTION</h4>
+                        <h4 className="text-xs">{(movie.runtime/60).toFixed(2)}h &bull; {genres} &bull; 16+</h4>
                     </div>
                     <div className="flex items-center gap-4 md:w-screen w-screen md:px-4  px-4 lg:w-full ">
                         <button className="bg-bcolor-300 w-full py-3 text-white font-semibold rounded-lg">Rent ₹149</button>

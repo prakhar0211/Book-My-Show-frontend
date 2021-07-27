@@ -1,16 +1,20 @@
-import React from "react";
-import { BiChevronDown,BiShareAlt } from "react-icons/bi";
+import React, { useContext } from "react";
+import { BiChevronDown, BiShareAlt } from "react-icons/bi";
 import { IoShareSocialOutline, IoIosSearch } from "react-icons/io";
 import { FiMenu } from "react-icons/fi";
 
+// context
+import { MovieContext } from "../../context/movie.context";
+
 const NavSm = () => {
+    const { movie } = useContext(MovieContext);
     return (
         <>
-            <div className="text-white flex items-center justify-between">
+            <div className="text-white flex items-center justify-between py-3">
                 <div>
-                    <h3 className="text-2xl font-bold">It All Starts Here!</h3>
+                    <h3 className="text-3xl font-bold">{movie.original_title}</h3>
                 </div>
-                <div className="w-6 h-6">
+                <div className="w-7 h-7">
                     <BiShareAlt className="w-full h-full" />
                 </div>
             </div>
@@ -36,7 +40,7 @@ const NavLg = () => {
                         Kanpur <BiChevronDown />
                     </span>
                     <button className="bg-bcolor-300 text-white px-3 py-1 text-sm rounded">Sign in</button>
-                    <div className="h-8 w-8 text-white"><FiMenu className="w-full h-full"/></div>
+                    <div className="h-8 w-8 text-white"><FiMenu className="w-full h-full" /></div>
                 </div>
             </div>
         </>
